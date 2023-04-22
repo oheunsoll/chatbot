@@ -29,6 +29,7 @@ def get_filtered_text(file_to_parse: str) -> str:
 
         for i in range(w+1):
             globals()[str(i)]['contents']=globals()[str(i)]['contents'].replace("\x00", ' ')
+            globals()[str(i)]['contents'] = globals()[str(i)]['contents'].replace("\n", ' ')
             print(globals()[str(i)])
             print('\n')
 
